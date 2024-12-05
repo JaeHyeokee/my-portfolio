@@ -1,0 +1,12 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: dimgray;
+    height: 100px;
+    align-items: center;
+}
+
+.mention {
+    height: fit-content;
+    color: white;
+}
