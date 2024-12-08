@@ -1,9 +1,9 @@
 import React from 'react';
-import Style from '../css/Project.module.css';
+import Style from '../css/Projects.module.css';
 
 const Project = () => {
     return (
-        <div id="project" className={Style.d}>
+        <div id="projects" className={Style.d}>
             
         </div>
     );

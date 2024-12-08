@@ -22,9 +22,10 @@ const Header = () => {
         <nav className={`${Style.navbar} ${isScrolled ? Style.scrolled : ''}`}>
             <Link to="intro" smooth={true} duration={500} className={Style.logo}>&#xE000; Jaehyeok's Portfolio / &#xE001;</Link>
             <ul className={Style.navLinks}>
-                <li className={Style.link}><Link to="about" smooth={true} duration={500}>About</Link></li>
-                <li className={Style.link}><Link to="project" smooth={true} duration={500}>Project</Link></li>
-                <li className={Style.link}><Link to="contact" smooth={true} duration={500}>Contact</Link></li>
+                <li className={Style.link}><Link to="about" smooth={true} duration={500}>ABOUT</Link></li>
+                <li className={Style.link}><Link to="skills" smooth={true} duration={500}>SKILLS</Link></li>
+                <li className={Style.link}><Link to="projects" smooth={true} duration={500}>PROJECTS</Link></li>
+                <li className={Style.link}><Link to="contact" smooth={true} duration={500}>CONTACT</Link></li>
             </ul>
         </nav>
     );

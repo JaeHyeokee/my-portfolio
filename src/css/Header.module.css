@@ -29,7 +29,7 @@
 .navLinks {
     display: flex;
     flex-direction: row;
-    gap: 90px;
+    gap: 70px;
     padding: 0;
     list-style-type: none;
 }

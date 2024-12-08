@@ -3,7 +3,8 @@ import Style from '../css/Home.module.css';
 import Header from './Header';
 import Intro from './Intro';
 import About from './About';
-import Project from './Project';
+import Skills from './Skills';
+import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
 
@@ -15,7 +16,8 @@ const Home = () => {
                 <div className={Style.fixedImage}></div>
                 <Intro/>
                 <About/>
-                <Project/>
+                <Skills/>
+                <Projects/>
                 <Contact/>
                 <Footer/>
             </div>

@@ -1,15 +1,17 @@
 import React from 'react';
 import Style from '../css/About.module.css';
-import ProfileImg from '../img/Profile.jpg';
-import Name from '../img/Name.png';
-import Birth from '../img/Birth.png';
-import Residence from '../img/Residence.png';
-import Education from '../img/Education.png';
+import ProfileImg from '../img/about/Profile.jpg';
+import Name from '../img/about/Name.png';
+import Birth from '../img/about/Birth.png';
+import Residence from '../img/about/Residence.png';
+import Education from '../img/about/Education.png';
+import Phone from '../img/about/Phone.png';
+import Email from '../img/about/Email.png';
 
 const About = () => {
     return (
         <section id="about" className={Style.section}>
-            <span className={Style.title}>About Me</span>
+            <span className={Style.title}>ABOUT</span>
             <div className={Style.profileSection}>
                 <img src={ProfileImg} alt='profileImg'/>
                 <div className={Style.profileFrame}>
@@ -33,11 +35,11 @@ const About = () => {
                             <p className={Style.info}><label className={Style.label}>최종 학력<br/></label>세종대학교 소프트웨어학과</p>
                         </li>
                         <li className={Style.profileInfo}>
-                            <img className={Style.icon} src={Name} alt='name'/>    
+                            <img className={Style.icon} src={Phone} alt='phone'/>    
                             <p className={Style.info}><label className={Style.label}>연락처<br/></label>010-4678-3712</p>
                         </li>
                         <li className={Style.profileInfo}>
-                            <img className={Style.icon} src={Name} alt='name'/>    
+                            <img className={Style.icon} src={Email} alt='email'/>    
                             <p className={Style.info}><label className={Style.label}>이메일<br/></label>jaehyeok817@naver.com</p>
                         </li>
                     </ul>
