@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'MyFont';  /* 사용하고 싶은 글꼴 이름 */
+    src: url('./SpoqaHanSansNeo-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: 'MyFont', sans-serif; /* 기본 글꼴을 'MyFont'로 설정 */
+  }
