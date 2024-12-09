@@ -3,7 +3,8 @@
     flex-direction: column;
     justify-content: space-between;
     background: #EEEEEE;
-    height: 1000px;
+    height: auto;
+    gap: 100px;
     padding: 70px 15%;
 }
 
@@ -21,4 +22,40 @@
     height: 3px;
     background-color: #444649;
     margin: 7px auto 0;
+}
+
+.skillFrame {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.typeLabel {
+    font-size: 20px;
+    width: 150px;
+    color: #444649;
+}
+
+.type {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+}
+
+.item {
+    height: 100px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.icon {
+    height: 100px;
+    border-radius: 10px;
+    overflow: hidden;
 }
