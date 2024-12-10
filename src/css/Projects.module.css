@@ -1,4 +1,74 @@
-.d {
-    background: transparent;
-    height: 1000px;
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+    height: auto;
+    gap: 100px;
+    padding: 70px 15%;
+}
+
+.title {
+    font-size: 2rem;
+    color: #444649;
+    font-weight: bold;
+    text-align: center;
+}
+
+.title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #444649;
+    margin: 7px auto 0;
+}
+
+.projectFrame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 0 70px;
+}
+
+.project {
+    display: flex;
+    height: 300px;
+    width: 70%;
+    box-shadow: 3px 3px 5px #EEEEEE;
+}
+
+.thumbnail {
+    width: 45%;
+    background-color: #EEEEEE;
+}
+
+.spoiler {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    width: 55%;
+}
+
+.name {
+    color: #444649;
+    font-size: 35px;
+}
+
+.period {
+    color: #929292;
+    margin-bottom: 30px;
+}
+
+.info {
+    color: #444649;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.skills {
+    color: #929292;
 }

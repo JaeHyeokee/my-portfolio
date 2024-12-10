@@ -1,4 +1,42 @@
-.d {
-    background: black;
-    height: 1000px;
+.frame {
+    display: flex;
+    flex-direction: column;
+    background: #1B242F;
+    height: auto;
+}
+
+.triangle {
+    width: 100%;
+    height: 120px;
+    background-color: white;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    padding: 70px 15%;
+}
+
+.title {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: white;
+    margin: 7px auto 0;
+}
+
+.mention {
+    text-align: center;
+    height: fit-content;
+    color: white;
 }
