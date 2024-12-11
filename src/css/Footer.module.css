@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'MyFontThin';
+    src: url('../font/SpoqaHanSansNeo-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    background: #1B242F;
+    height: 250px;
+    padding: 0 15%;
+}
+
+.socialList {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+}
+
+.social {
+    background-color: #262F38;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background 0.3s, transform 0.2s ease;
+}
+
+.social:hover {
+    background-color: #03C75A;
+    transform: scale(0.95);
+}
+
+.socialLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.socialIcon {
+    height: 40%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social:hover .socialIcon {
+    animation: slot-machine 0.3s ease-in-out;
+}
+
+@keyframes slot-machine {
+    0% {
+        transform: translateY(0); /* 처음 위치 */
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(100%); /* 아래로 내려가기 */
+        opacity: 0;
+    }
+    51% {
+        transform: translateY(-100%); /* 위에서 다시 나타남 */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%); /* 처음 위치 복귀 */
+        opacity: 1;
+    }
+}
+
+.mentionFrame {
+    font-family: 'MyFontThin', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    font-weight: bold;
+    font-weight: lighter;
+    color: #8A9AA0;
+}
+
+.mentionYear {
+    color: #03C75A;
+    font-weight: bold;
+}
