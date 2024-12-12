@@ -52,7 +52,7 @@ const Contact = () => {
             <div className={Style.triangle}></div>
             <div className={Style.section}>
                 <span className={Style.title}>CONTACT</span>
-                <form className={Style.form}>
+                <form className={Style.form} onSubmit={ handleSubmit }>
                     <FloatingLabelInput label="Email" type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                     <FloatingLabelInput label="Title" type="text" id="title" value={title} onChange={(e) => setTitle(e.target.value)}/>
                     <div className={Style.floatingLabelContainer}>
