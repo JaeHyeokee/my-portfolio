@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({ path: '/home/ubuntu/.env' });
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
