@@ -12,11 +12,12 @@ app.use(express.json());
 // Nodemailer 설정
 const transporter = nodemailer.createTransport({
     service: process.env.EMAIL_SERV,
+    host: process.env.EMAIL_HOST,
+    port: PORT,
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
-    },
-    port: PORT
+    }
 });
 
 app.post('/send-email', (req, res) => {
