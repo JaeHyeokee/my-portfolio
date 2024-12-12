@@ -53,10 +53,10 @@ const Contact = () => {
             <div className={Style.section}>
                 <span className={Style.title}>CONTACT</span>
                 <form className={Style.form}>
-                    <FloatingLabelInput label="Email" type="email" id="email"/>
-                    <FloatingLabelInput label="Title" type="text" id="title"/>
+                    <FloatingLabelInput label="Email" type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                    <FloatingLabelInput label="Title" type="text" id="title" value={title} onChange={(e) => setTitle(e.target.value)}/>
                     <div className={Style.floatingLabelContainer}>
-                        <textarea placeholder=" " rows={7} className={Style.floatingLabelInputLong}  id="contents"/>
+                        <textarea placeholder=" " rows={7} className={Style.floatingLabelInputLong}  id="contents" value={contents} onChange={(e) => setContents(e.target.value)}/>
                         <label htmlFor="contents" className={Style.floatingLabelLong}>Contents</label>
                     </div>
                     <button className={Style.send} type="submit">Send</button>

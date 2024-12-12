@@ -1,19 +1,20 @@
+require('dotenv').config();
 const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.EMAIL_PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
 
 // Nodemailer 설정
 const transporter = nodemailer.createTransport({
-    service: 'naver',
+    service: process.env.EMAIL_SERV,
     auth: {
-        user: 'jaehyeok817@naver.com',
-        pass: 'your-email-password', // Naver 이메일 비밀번호 또는 앱 비밀번호
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
     },
 });
 
@@ -22,7 +23,7 @@ app.post('/send-email', (req, res) => {
 
     const mailOptions = {
         from: email,
-        to: 'jaehyeok817@naver.com',
+        to: process.env.EMAIL_USER,
         subject: title,
         text: contents,
     };
