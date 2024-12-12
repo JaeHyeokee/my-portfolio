@@ -106,7 +106,7 @@
     border: 2px solid white;
     color: white;
     font-size: 17px;
-    transition: background-color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .send:hover {
