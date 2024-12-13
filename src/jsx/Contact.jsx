@@ -34,19 +34,17 @@ const Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setStatus('');
+        setStatus('Please wait...');
 
         try {
             const response = await axios.post('http://43.203.22.247:5000/send', formData);
             if (response.status === 200) {
                 setStatus('Email sent successfully!');
-                alert('성공');
                 setFormData({ email: '', title: '', contents: '' });
             } 
         } catch (error) {
             console.error('Error sending email:', error);
-            setStatus('메일 전송에 실패했습니다.');
-            alert('실패');
+            setStatus('Failed to send email.');
         }
     };
 
@@ -62,9 +60,11 @@ const Contact = () => {
                         <textarea placeholder=" " rows={7} className={Style.floatingLabelInputLong}  name="contents" value={formData.contents} onChange={handleChange}/>
                         <label htmlFor="contents" className={Style.floatingLabelLong}>Contents</label>
                     </div>
-                    <button className={Style.send} type="submit">Send</button>
+                    <div className={Style.statusAndButton}>
+                        <p className={Style.status}>{status}</p>
+                        <button className={Style.send} type="submit">Send</button>
+                    </div>
                 </form>
-                {status && <p>{status}</p>}
             </div>
         </div>
     );

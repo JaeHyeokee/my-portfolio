@@ -15,6 +15,7 @@
 .section {
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: auto;
     padding: 70px 15%;
 }
@@ -38,9 +39,8 @@
 .form {
     display: flex;
     flex-direction: column;
-    align-items: end;
     margin-top: 70px;
-    padding: 0 30%;
+    width: 500px;
 }
 
 .floatingLabelContainer {
@@ -98,6 +98,20 @@
     color: white;
 }
 
+.statusAndButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.status {
+    font-family: 'MyFontThin', sans-serif;
+    color: white;
+    font-size: 13px;
+    margin: 0 20px;
+}
+
 .send {
     font-family: 'MyFont', sans-serif;
     height: 40px;
@@ -112,4 +126,27 @@
 .send:hover {
     background-color: #03C75A;
     border: 0;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 50px 0;
+    }
+
+    .triangle {
+        height: 60px;
+    }
+
+    .form {
+        width: 300px;
+    }
+
+    .statusAndButton {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .send {
+        width: 200px;
+    }
 }

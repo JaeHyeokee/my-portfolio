@@ -17,8 +17,10 @@ const Project = () => {
                     <div className={Style.project} key={item.id}>
                         <img className={Style.thumbnail} src={item.thumbnail} alt='thumbnail'/>
                         <div className={Style.spoiler}>
-                            <span className={Style.name}>{item.name}</span>
-                            <span className={Style.period}>{item.period}</span>
+                            <div className={Style.nameAndPeriod}>
+                                <span className={Style.name}>{item.name}</span>
+                                <span className={Style.period}>{item.period}</span>
+                            </div>
                             <span className={Style.info}>{item.info}</span>
                             <span className={Style.skills}>{item.skills}</span>
                         </div>
