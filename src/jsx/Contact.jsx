@@ -41,7 +41,7 @@ const Contact = () => {
             if (response.status === 200) {
                 setStatus('Email sent successfully!');
                 alert('성공');
-                setFormData({ name: '', email: '', message: '' });
+                setFormData({ email: '', title: '', contents: '' });
             } 
         } catch (error) {
             console.error('Error sending email:', error);
