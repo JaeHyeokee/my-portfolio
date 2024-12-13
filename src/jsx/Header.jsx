@@ -50,7 +50,7 @@ const Header = () => {
 
             <nav className={Style.navbarMobile}>
                 <div className={`${Style.navMobileTop} ${isScrolled ? Style.scrolled : ''}`}>
-                    <Link to="introMobile" smooth={true} duration={500}><img className={Style.logoMobile} src={Logo} alt='logo'/></Link>
+                    <Link to="intro" smooth={true} duration={500}><img className={Style.logoMobile} src={Logo} alt='logo'/></Link>
                     
                     {/* 햄버거 아이콘 */}
                     <div className={Style.hamburgerIcon} onClick={toggleMenu}>
