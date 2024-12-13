@@ -1,13 +1,15 @@
-require('dotenv').config({ path: '/home/ubuntu/.env' });
 const express = require('express');
 const nodemailer = require('nodemailer');
+const bodyParser = require('body-parser');
 const cors = require('cors');
+require('dotenv').config({ path: '/home/ubuntu/.env' });
 
 const app = express();
 const PORT = process.env.EMAIL_PORT || 5000;
 
+// Middleware
 app.use(cors());
-app.use(express.json());
+app.use(bodyParser.json());
 
 // Nodemailer 설정
 const transporter = nodemailer.createTransport({
@@ -21,8 +23,13 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-app.post('/send-email', (req, res) => {
+// 메일 전송 API
+app.post('/send', async (req, res) => {
     const { email, title, contents } = req.body;
+
+    if (!email || !title || !contents) {
+        return res.status(400).json({ error: '모든 필드를 입력해주세요.' });
+    }
 
     const mailOptions = {
         from: email,
@@ -31,17 +38,16 @@ app.post('/send-email', (req, res) => {
         text: contents,
     };
 
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.error(error);
-            res.status(500).send('Error sending email');
-        } else {
-            console.log('Email sent: ' + info.response);
-            res.status(200).send('Email sent successfully');
-        }
-    });
+    try {
+        await transporter.sendMail(mailOptions);
+        res.status(200).json({ message: '메일이 성공적으로 전송되었습니다.' });
+    } catch (error) {
+        console.error('Error sending email:', error);
+        res.status(500).json({ error: '메일 전송에 실패했습니다.' });
+    }
 });
 
+// 서버 실행
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
