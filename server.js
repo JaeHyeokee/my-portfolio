@@ -38,8 +38,8 @@ app.post('/send', async (req, res) => {
         html: 
             `My Portfolio 에서 메시지가 수신되었습니다.<br/>
             이메일 : ${email}<br/>
-            제  목 : ${title}<br/>
-            내  용 : ${contents}`,
+            제　목 : ${title}<br/>
+            내　용 : ${contents}`,
     };
 
     try {
