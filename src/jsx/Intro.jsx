@@ -12,7 +12,7 @@ const Intro = () => {
                 ]}
                 typeSpeed={70}
                 backSpeed={0}
-                startDelay={1500}
+                startDelay={1000}
             />
         </section>
     );
