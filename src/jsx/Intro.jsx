@@ -8,7 +8,7 @@ const Intro = () => {
             <ReactTyped
                 className={Style.title}
                 strings={[
-                    "안녕하세요<br>개발자 이재혁입니다 :)",
+                    "도전과 발전을 추구하는<br>개발자 이재혁입니다 :)",
                 ]}
                 typeSpeed={70}
                 backSpeed={0}

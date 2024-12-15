@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Style from '../css/Contact.module.css';
+import { motion } from 'framer-motion';
 
 const FloatingLabelInput = ({ label, type, name, value, onChange }) => {
     return (
@@ -49,10 +50,18 @@ const Contact = () => {
     };
 
     return (
-        <div id="contact" className={Style.frame}>
+        <motion.section
+            id="projects"
+            className={Style.frame}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ ease: "easeOut", duration: 0.5 }}
+        >
             <div className={Style.triangle}></div>
             <div className={Style.section}>
                 <span className={Style.title}>CONTACT</span>
+                <p className={Style.recommend}>Have a question or want to work together?</p>
                 <form className={Style.form} onSubmit={handleSubmit}>
                     <FloatingLabelInput label="Email" type="email" name="email" value={formData.email} onChange={handleChange}/>
                     <FloatingLabelInput label="Title" type="text" name="title" value={formData.title} onChange={handleChange}/>
@@ -66,7 +75,7 @@ const Contact = () => {
                     </div>
                 </form>
             </div>
-        </div>
+        </motion.section>
     );
 };
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Style from '../css/Skills.module.css';
+import { motion } from 'framer-motion';
 import Data from '../data/Skills.json';
 
 const groupByType = (data) => {
@@ -21,7 +22,14 @@ const Skills = () => {
     }, []);
 
     return (
-        <section id="skills" className={Style.section}>
+        <motion.section
+            id="skills"
+            className={Style.section}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ ease: "easeOut", duration: 0.5 }}
+        >
             <span className={Style.title}>SKILLS</span>
             <div className={Style.skillFrame}>
             {Object.keys(groupedData).map((type) => (
@@ -40,7 +48,7 @@ const Skills = () => {
                 </div>
             ))}
             </div>
-        </section>
+        </motion.section>
     );
 };
 

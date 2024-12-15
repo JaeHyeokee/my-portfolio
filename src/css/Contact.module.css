@@ -36,10 +36,17 @@
     margin: 7px auto 0;
 }
 
+.recommend {
+    font-family: 'MyFontThin', sans-serif;
+    font-weight: bold;
+    color: #8A9AA0;
+    margin-top: 40px;
+}
+
 .form {
     display: flex;
     flex-direction: column;
-    margin-top: 70px;
+    margin-top: 40px;
     width: 500px;
 }
 
@@ -50,6 +57,7 @@
 }
   
 .floatingLabelInput, .floatingLabelInputLong {
+    font-family: 'MyFontThin', sans-serif;
     width: 100%;
     padding: 30px 15px 10px 15px;
     font-size: 15px;
@@ -58,10 +66,6 @@
     background-color: #1E242C;
     font-weight: lighter;
     outline: none;
-}
-
-.floatingLabelInputLong {
-    font-family: 'MyFont', sans-serif;
 }
 
 .floatingLabel, .floatingLabelLong {

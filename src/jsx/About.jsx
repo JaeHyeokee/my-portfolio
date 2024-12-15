@@ -1,5 +1,6 @@
 import React from 'react';
 import Style from '../css/About.module.css';
+import { motion } from 'framer-motion';
 import ProfileImg from '../img/about/Profile.jpg';
 import Name from '../img/about/Name.png';
 import Birth from '../img/about/Birth.png';
@@ -9,8 +10,16 @@ import Phone from '../img/about/Phone.png';
 import Email from '../img/about/Email.png';
 
 const About = () => {
+ 
     return (
-        <section id="about" className={Style.section}>
+        <motion.section
+            id="about"
+            className={Style.section}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ ease: "easeOut", duration: 0.5 }}
+        >
             <span className={Style.title}>ABOUT</span>
             <div className={Style.profileSection}>
                 <img className={Style.profileImg} src={ProfileImg} alt='profileImg'/>
@@ -69,7 +78,7 @@ const About = () => {
                     </li>
                 </ul>
             </div>
-        </section>
+        </motion.section>
     );
 };
 

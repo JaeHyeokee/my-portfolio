@@ -1,13 +1,22 @@
 import React from 'react';
 import Style from '../css/Footer.module.css';
+import Top from '../img/footer/Top.png';
 import Github from '../img/footer/Github.png';
 import Instagram from '../img/footer/Instagram.png';
 import Facebook from '../img/footer/Facebook.png';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
     return (
         <footer className={Style.footer}>
+            <div className={Style.goTop} onClick={scrollToTop}><img className={Style.topImg} src={Top} alt='top'/></div>
             <ul className={Style.socialList}>
                 <li className={Style.social}>
                     <Link className={Style.socialLink} to='https://github.com/JaeHyeokee'>

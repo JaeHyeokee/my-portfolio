@@ -24,6 +24,15 @@
     margin: 7px auto 0;
 }
 
+.hidden {
+    opacity: 0;
+    transform: translateX(-50%);
+}
+
+.animate {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
 .profileSection {
     display: flex;
     justify-content: space-between;

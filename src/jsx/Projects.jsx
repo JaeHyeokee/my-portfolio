@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Style from '../css/Projects.module.css';
+import { motion } from 'framer-motion';
 import Data from '../data/Projects.json';
 
 const Project = () => {
@@ -10,7 +11,14 @@ const Project = () => {
     }, []);
 
     return (
-        <div id="projects" className={Style.section}>
+        <motion.section
+            id="projects"
+            className={Style.section}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ ease: "easeOut", duration: 0.5 }}
+        >
             <span className={Style.title}>PROJECTS</span>
             <div className={Style.projectFrame}>
                 {data.map((item) => (
@@ -27,7 +35,7 @@ const Project = () => {
                     </div>
                 ))}
             </div>
-        </div>
+        </motion.section>
     );
 };
 
