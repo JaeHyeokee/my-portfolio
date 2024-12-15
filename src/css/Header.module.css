@@ -69,10 +69,10 @@
 }
 
 .navMobileTop {
-    height: 70px;
+    height: 50px;
     display: flex;
     align-items: center;
-    padding: 0 25px;
+    padding: 0 15px;
     justify-content: space-between;
     transition: all 0.3s ease-in-out;
 }
@@ -83,13 +83,14 @@
 }
 
 .logoMobile {
-    width: 50px;
+    width: 30px;
+    height: 100%;
 }
 
 
 .hamburgerIcon {
-    width: 32px;
-    height: 35px;
+    width: 20px;
+    height: 25px;
     display: flex;
     padding: 5px 0;
     flex-direction: column;
@@ -101,14 +102,14 @@
 }
 
 .bar {
-    height: 3px;
+    height: 1.5px;
     width: 100%;
     background-color: white;
     transition: all 0.4s ease-in-out;
 }
 
 .top.open {
-    transform: translateY(11px) rotate(45deg);
+    transform: translateY(6px) rotate(45deg);
 }
 
 .mid.open {
@@ -116,7 +117,7 @@
 }
 
 .bot.open {
-    transform: translateY(-11px) rotate(-45deg);
+    transform: translateY(-7px) rotate(-45deg);
 }
 
 .navLinksMobile {
@@ -153,7 +154,7 @@
 
 @media (max-width: 768px) {
     .header.scrolled {
-        height: 70px;
+        height: 50px;
     }
 
     .navbar {
