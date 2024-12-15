@@ -3,9 +3,11 @@ import Style from '../css/Skills.module.css';
 import Data from '../data/Skills.json';
 
 const groupByType = (data) => {
-    return data.reduce((acc, item) => {
-        if (!acc[item.type]) acc[item.type] = [];
-        acc[item.type].push(item);
+    return data.reduce((acc, curr) => {
+        acc[curr.type] = {
+            img: curr.img,
+            items: [...curr.items]
+        };
         return acc;
     }, {});
 };
@@ -24,9 +26,12 @@ const Skills = () => {
             <div className={Style.skillFrame}>
             {Object.keys(groupedData).map((type) => (
                 <div key={type} className={Style.group}>
-                    <span className={Style.typeLabel}>{type}</span>
+                    <div className={Style.typeFrame}>
+                        <img className={Style.typeImg} src={groupedData[type].img} alt={`${type} icon`}/>
+                        <span className={Style.typeLabel}>{type}</span>
+                    </div>
                     <div className={Style.type}>
-                        {groupedData[type].map((item) => (
+                        {groupedData[type].items.map((item) => (
                             <div key={item.id} className={Style.item}>
                                 <img className={Style.icon} src={item.icon} alt={item.name}/>
                             </div>

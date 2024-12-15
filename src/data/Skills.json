@@ -1,36 +1,73 @@
 [
-    { "id" : 1, "type" : "Languages", "name": "C", "icon" : "/skills/C.png" },
-    { "id" : 2, "type" : "Languages", "name": "C++", "icon" : "/skills/C++.png" },
-    { "id" : 3, "type" : "Languages", "name": "JAVA", "icon" : "/skills/Java.png" },
-    { "id" : 4, "type" : "Languages", "name": "KOTLIN", "icon" : "/skills/Kotlin.png" },
-    { "id" : 5, "type" : "Languages", "name": "PYTHON", "icon" : "/skills/Python.png" },
-    { "id" : 6, "type" : "Frontend", "name": "HTML5", "icon" : "/skills/Html5.png" },
-    { "id" : 7, "type" : "Frontend", "name": "CSS3", "icon" : "/skills/Css3.png" },
-    { "id" : 8, "type" : "Frontend", "name": "JAVASCRIPT", "icon" : "/skills/Javascript.png" },
-    { "id" : 9, "type" : "Frontend", "name": "JQUERY", "icon" : "/skills/Jquery.png" },
-    { "id" : 10, "type" : "Frontend", "name": "BOOTSTRAP", "icon" : "/skills/Bootstrap.png" },
-    { "id" : 11, "type" : "Frontend", "name": "REACT", "icon" : "/skills/React.png" },
-    { "id" : 12, "type" : "Frontend", "name": "REACTBOOTSTRAP", "icon" : "/skills/ReactBootstrap.png" },
-    { "id" : 13, "type" : "Backend", "name": "NODEJS", "icon" : "/skills/Nodejs.png" },
-    { "id" : 14, "type" : "Backend", "name": "MYBATIS", "icon" : "/skills/MyBatis.png" },
-    { "id" : 15, "type" : "Backend", "name": "SPRING", "icon" : "/skills/Spring.png" },
-    { "id" : 16, "type" : "Backend", "name": "SPRINGBOOT", "icon" : "/skills/SpringBoot.png" },
-    { "id" : 17, "type" : "Backend", "name": "SPRINGSECURITY", "icon" : "/skills/SpringSecurity.png" },
-    { "id" : 18, "type" : "Backend", "name": "HIBERNATE", "icon" : "/skills/Hibernate.png" },
-    { "id" : 19, "type" : "Backend", "name": "JWT", "icon" : "/skills/Jwt.png" },
-    { "id" : 20, "type" : "Backend", "name": "GRADLE", "icon" : "/skills/Gradle.png" },
-    { "id" : 21, "type" : "Backend", "name": "PM2", "icon" : "/skills/Pm2.png" },
-    { "id" : 22, "type" : "Databases & Caching", "name": "MYSQL", "icon" : "/skills/Mysql.png" },
-    { "id" : 23, "type" : "Databases & Caching", "name": "MARIADB", "icon" : "/skills/Mariadb.png" },
-    { "id" : 24, "type" : "Databases & Caching", "name": "REDIS", "icon" : "/skills/Redis.png" },
-    { "id" : 25, "type" : "Cloud & Deployment", "name": "AWS", "icon" : "/skills/Aws.png" },
-    { "id" : 26, "type" : "Cloud & Deployment", "name": "EC2", "icon" : "/skills/Ec2.png" },
-    { "id" : 27, "type" : "Cloud & Deployment", "name": "RDS", "icon" : "/skills/Rds.png" },
-    { "id" : 28, "type" : "Cloud & Deployment", "name": "S3", "icon" : "/skills/S3.png" },
-    { "id" : 29, "type" : "Cloud & Deployment", "name": "LINUX", "icon" : "/skills/Linux.png" },
-    { "id" : 30, "type" : "Cloud & Deployment", "name": "UBUNTU", "icon" : "/skills/Ubuntu.png" },
-    { "id" : 31, "type" : "Version Control & Collaboration", "name": "GIT", "icon" : "/skills/Git.png" },
-    { "id" : 32, "type" : "Version Control & Collaboration", "name": "GITHUB", "icon" : "/skills/Github.png" },
-    { "id" : 33, "type" : "Version Control & Collaboration", "name": "NOTION", "icon" : "/skills/Notion.png" },
-    { "id" : 34, "type" : "Version Control & Collaboration", "name": "FIGMA", "icon" : "/skills/Figma.png" }
+    {
+        "type" : "Languages",
+        "img" : "skills/img/Languages.png",
+        "items" : [
+            { "id" : 1, "name": "C", "icon" : "/skills/icon/C.png" },
+            { "id" : 2, "name": "C++", "icon" : "/skills/icon/C++.png" },
+            { "id" : 3, "name": "JAVA", "icon" : "/skills/icon/Java.png" },
+            { "id" : 4, "name": "KOTLIN", "icon" : "/skills/icon/Kotlin.png" },
+            { "id" : 5, "name": "PYTHON", "icon" : "/skills/icon/Python.png" }
+        ]
+    },
+    {
+        "type" : "Frontend",
+        "img" : "skills/img/Frontend.png",
+        "items" : [
+            { "id" : 6, "name": "HTML5", "icon" : "/skills/icon/Html5.png" },
+            { "id" : 7, "name": "CSS3", "icon" : "/skills/icon/Css3.png" },
+            { "id" : 8, "name": "JAVASCRIPT", "icon" : "/skills/icon/Javascript.png" },
+            { "id" : 9, "name": "JQUERY", "icon" : "/skills/icon/Jquery.png" },
+            { "id" : 10, "name": "BOOTSTRAP", "icon" : "/skills/icon/Bootstrap.png" },
+            { "id" : 11, "name": "REACT", "icon" : "/skills/icon/React.png" },
+            { "id" : 12, "name": "REACTBOOTSTRAP", "icon" : "/skills/icon/ReactBootstrap.png" }
+        ]
+    },
+    {
+        "type" : "Backend",
+        "img" : "skills/img/Backend.png",
+        "items" : [
+            { "id" : 13, "name": "NODEJS", "icon" : "/skills/icon/Nodejs.png" },
+            { "id" : 14, "name": "MYBATIS", "icon" : "/skills/icon/MyBatis.png" },
+            { "id" : 15, "name": "SPRING", "icon" : "/skills/icon/Spring.png" },
+            { "id" : 16, "name": "SPRINGBOOT", "icon" : "/skills/icon/SpringBoot.png" },
+            { "id" : 17, "name": "SPRINGSECURITY", "icon" : "/skills/icon/SpringSecurity.png" },
+            { "id" : 18, "name": "HIBERNATE", "icon" : "/skills/icon/Hibernate.png" },
+            { "id" : 19, "name": "JWT", "icon" : "/skills/icon/Jwt.png" },
+            { "id" : 20, "name": "GRADLE", "icon" : "/skills/icon/Gradle.png" },
+            { "id" : 21, "name": "PM2", "icon" : "/skills/icon/Pm2.png" }
+        ]
+    },
+    {
+        "type" : "Databases & Caching",
+        "img" : "skills/img/Databases.png",
+        "items" : [
+            { "id" : 22, "name": "MYSQL", "icon" : "/skills/icon/Mysql.png" },
+            { "id" : 23, "name": "MARIADB", "icon" : "/skills/icon/Mariadb.png" },
+            { "id" : 24, "name": "REDIS", "icon" : "/skills/icon/Redis.png" }
+        ]
+    },
+    {
+        "type" : "Cloud & Deployment",
+        "img" : "skills/img/Cloud.png",
+        "items" : [
+            { "id" : 25, "name": "AWS", "icon" : "/skills/icon/Aws.png" },
+            { "id" : 26, "name": "EC2", "icon" : "/skills/icon/Ec2.png" },
+            { "id" : 27, "name": "RDS", "icon" : "/skills/icon/Rds.png" },
+            { "id" : 28, "name": "S3", "icon" : "/skills/icon/S3.png" },
+            { "id" : 29, "name": "LINUX", "icon" : "/skills/icon/Linux.png" },
+            { "id" : 30, "name": "UBUNTU", "icon" : "/skills/icon/Ubuntu.png" },
+            { "id" : 31, "name": "NGINX", "icon" : "/skills/icon/Nginx.png" }
+        ]
+    },
+    {
+        "type" : "Collaboration",
+        "img" : "skills/img/Collaboration.png",
+        "items" : [
+            { "id" : 32, "name": "GIT", "icon" : "/skills/icon/Git.png" },
+            { "id" : 33, "name": "GITHUB", "icon" : "/skills/icon/Github.png" },
+            { "id" : 34, "name": "NOTION", "icon" : "/skills/icon/Notion.png" },
+            { "id" : 35, "name": "FIGMA", "icon" : "/skills/icon/Figma.png" }
+        ]
+    }
 ]

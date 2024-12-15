@@ -1,7 +1,7 @@
 .frame {
     display: flex;
     flex-direction: column;
-    background: #252934;
+    background-color: #252934;
     height: auto;
 }
 
