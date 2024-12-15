@@ -10,8 +10,7 @@ const Header = () => {
 
     const handleScroll = () => {
         const currentScrollY = window.scrollY;
-        if (window.scrollY > 80) setIsScrolled(true);
-        else setIsScrolled(false);
+        if (!isOpen) setIsScrolled(window.scrollY > 80);
 
         const sections = ['intro', 'about', 'skills', 'projects', 'contact'];
         for (let section of sections) {
@@ -33,7 +32,7 @@ const Header = () => {
         return () => {
           window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [isOpen]);
 
     return (
         <header className={Style.header}>
