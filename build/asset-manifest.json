@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c3db2c43.css",
-    "main.js": "/static/js/main.cb3e1fe0.js",
+    "main.css": "/static/css/main.fea2113c.css",
+    "main.js": "/static/js/main.98722372.js",
     "static/js/453.acca0757.chunk.js": "/static/js/453.acca0757.chunk.js",
     "static/media/Background.png": "/static/media/Background.7e095718018f929eadb4.png",
     "static/media/SpoqaHanSansNeo-Light.ttf": "/static/media/SpoqaHanSansNeo-Light.71d8174224ae0bcbefb2.ttf",
@@ -11,15 +11,16 @@
     "static/media/Instagram.png": "/static/media/Instagram.2c28393daeead3cdf982.png",
     "static/media/Github.png": "/static/media/Github.5473495a808be144c041.png",
     "static/media/Phone.png": "/static/media/Phone.220f5f4d9255de543d2b.png",
-    "static/media/Residence.png": "/static/media/Residence.4b24287cb33401ab0dfb.png",
-    "static/media/Birth.png": "/static/media/Birth.e512d40c7691faf000ee.png",
+    "static/media/Birth.png": "/static/media/Birth.a7cfd35c169a750c4f00.png",
+    "static/media/Education.png": "/static/media/Education.5738422d8b4547a3f93d.png",
+    "static/media/Name.png": "/static/media/Name.46a9d4827b9360911d0b.png",
     "index.html": "/index.html",
-    "main.c3db2c43.css.map": "/static/css/main.c3db2c43.css.map",
-    "main.cb3e1fe0.js.map": "/static/js/main.cb3e1fe0.js.map",
+    "main.fea2113c.css.map": "/static/css/main.fea2113c.css.map",
+    "main.98722372.js.map": "/static/js/main.98722372.js.map",
     "453.acca0757.chunk.js.map": "/static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c3db2c43.css",
-    "static/js/main.cb3e1fe0.js"
+    "static/css/main.fea2113c.css",
+    "static/js/main.98722372.js"
   ]
 }
