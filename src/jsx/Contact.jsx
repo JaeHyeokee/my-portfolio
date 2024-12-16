@@ -51,7 +51,7 @@ const Contact = () => {
 
     return (
         <motion.section
-            id="projects"
+            id="contact"
             className={Style.frame}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}

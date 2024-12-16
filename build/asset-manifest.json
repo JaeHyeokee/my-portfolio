@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9588d5e5.css",
-    "main.js": "/static/js/main.2eea4b8c.js",
+    "main.css": "/static/css/main.0f1513af.css",
+    "main.js": "/static/js/main.2377e921.js",
     "static/js/453.acca0757.chunk.js": "/static/js/453.acca0757.chunk.js",
     "static/media/Background.png": "/static/media/Background.7e095718018f929eadb4.png",
     "static/media/SpoqaHanSansNeo-Light.ttf": "/static/media/SpoqaHanSansNeo-Light.71d8174224ae0bcbefb2.ttf",
@@ -15,12 +15,12 @@
     "static/media/Education.png": "/static/media/Education.5738422d8b4547a3f93d.png",
     "static/media/Name.png": "/static/media/Name.46a9d4827b9360911d0b.png",
     "index.html": "/index.html",
-    "main.9588d5e5.css.map": "/static/css/main.9588d5e5.css.map",
-    "main.2eea4b8c.js.map": "/static/js/main.2eea4b8c.js.map",
+    "main.0f1513af.css.map": "/static/css/main.0f1513af.css.map",
+    "main.2377e921.js.map": "/static/js/main.2377e921.js.map",
     "453.acca0757.chunk.js.map": "/static/js/453.acca0757.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9588d5e5.css",
-    "static/js/main.2eea4b8c.js"
+    "static/css/main.0f1513af.css",
+    "static/js/main.2377e921.js"
   ]
 }
