@@ -10,6 +10,8 @@
     height: 120px;
     background-color: white;
     clip-path: polygon(50% 100%, 0 0, 100% 0);
+    transform: translateZ(0);
+    will-change: transform, clip-path;
 }
 
 .section {
