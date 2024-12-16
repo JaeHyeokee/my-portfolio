@@ -2,13 +2,26 @@ import React, { useEffect, useState } from 'react';
 import Style from '../css/Projects.module.css';
 import { motion } from 'framer-motion';
 import Data from '../data/Projects.json';
+import Modal from './Modal';
 
 const Project = () => {
     const [data, setData] = useState([]);
+    const [selectedProject, setSelectedProject] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
         setData(Data);
     }, []);
+
+    const openModal = (project) => {
+        setSelectedProject(project);
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setSelectedProject(null);
+        setIsModalOpen(false);
+    };
 
     return (
         <motion.section
@@ -22,7 +35,7 @@ const Project = () => {
             <span className={Style.title}>PROJECTS</span>
             <div className={Style.projectFrame}>
                 {data.map((item) => (
-                    <div className={Style.project} key={item.id}>
+                    <div className={Style.project} key={item.id} onClick={() => openModal(item)}>
                         <img className={Style.thumbnail} src={item.thumbnail} alt='thumbnail'/>
                         <div className={Style.spoiler}>
                             <div className={Style.nameAndPeriod}>
@@ -35,6 +48,10 @@ const Project = () => {
                     </div>
                 ))}
             </div>
+
+            {isModalOpen && (
+                <Modal project={selectedProject} onClose={closeModal}/>
+            )}
         </motion.section>
     );
 };

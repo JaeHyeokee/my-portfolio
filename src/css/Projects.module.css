@@ -37,6 +37,12 @@
     height: 270px;
     width: 750px;
     box-shadow: 3px 3px 5px #EEEEEE;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.project:hover {
+    transform: scale(1.01);
 }
 
 .thumbnail {
