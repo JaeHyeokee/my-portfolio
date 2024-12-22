@@ -37,8 +37,8 @@ const Modal = ({ project, onClose }) => {
             >
                 <button className={Style.closeButton} onClick={onClose}>X</button>
                 <Slider {...settings} className={Style.slider}>
-                    <div>
-                        <img src={project.thumbnail} alt='thumbnail'/>
+                    <div className={Style.infoImageFrame}>
+                        <img className={Style.infoImage} src={project.thumbnail} alt='thumbnail'/>
                     </div>
                     <div>
                         <img src={project.thumbnail} alt='thumbnail'/>
