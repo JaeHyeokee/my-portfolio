@@ -1,10 +1,21 @@
 import React from 'react';
 import Style from '../css/Modal.module.css';
 import { motion } from 'framer-motion';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Slider from 'react-slick';
 
 const Modal = ({ project, onClose }) => {
-    if (!project) return null;
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        pauseOnHover: true,
+    };
 
+    if (!project) return null;
     return (
         <motion.div
             className={Style.modalBackdrop}
@@ -25,14 +36,23 @@ const Modal = ({ project, onClose }) => {
                 transition={{ duration: 0.4, ease: "easeOut" }}
             >
                 <button className={Style.closeButton} onClick={onClose}>X</button>
-                <img className={Style.thumbnail} src={project.thumbnail} alt='thumbnail' />
-                <h2 className={Style.name}>{project.name}</h2>
-                <p className={Style.period}>{project.period}</p>
-                <p className={Style.info}>{project.info}</p>
-                <p className={Style.skills}>{project.skills}</p>
+                <Slider {...settings} className={Style.slider}>
+                    <div>
+                        <img src={project.thumbnail} alt='thumbnail'/>
+                    </div>
+                    <div>
+                        <img src={project.thumbnail} alt='thumbnail'/>
+                    </div>
+                </Slider>
+                <div>
+                    <h2 className={Style.name}>{project.name}</h2>
+                    <p className={Style.period}>{project.period}</p>
+                    <p className={Style.info}>{project.info}</p>
+                    <p className={Style.skills}>{project.skills}</p>
+                </div>
             </motion.div>
         </motion.div>
-    );
+    ); 
 };
 
 export default Modal;

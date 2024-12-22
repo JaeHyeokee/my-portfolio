@@ -1,5 +1,26 @@
 [
-    { "id" : 1, "name" : "커피빈", "thumbnail": "/projects/coffeebean/Thumbnail.png", "period" : "2024.07.27 ~ 2024.08.27", "info" : "중고 물품 및 중고차 거래 플랫폼", "skills" : "#React #JPA #JWT" },
-    { "id" : 2, "name" : "저기어때", "thumbnail": "/projects/jeogieottae/Thumbnail.png", "period" : "2024.06.02 ~ 2024.07.09", "info" : "숙박 시설과 승차권 조회 및 예약이 가능한 서비스", "skills" : "#Thymeleaf #MyBatis #OAuth #Spring" },
-    { "id" : 3, "name" : "창업스팟파인더", "thumbnail": "/projects/localtrend/Thumbnail.png", "period" : "2023.03.02 ~ 2023.06.12", "info" : "서울시 지역상권을 분석하고 추천해 주는 서비스", "skills" : "#React #Spring #JPA" }
-]    
+    {
+        "id" : 1,
+        "name" : "커피빈",
+        "thumbnail": "/projects/coffeebean/Thumbnail.png",
+        "period" : "2024.07.27 ~ 2024.08.27",
+        "info" : "중고 물품 및 중고차 거래 플랫폼",
+        "skills" : "#React #JPA #JWT"
+    },
+    {
+        "id" : 2,
+        "name" : "저기어때",
+        "thumbnail": "/projects/jeogieottae/Thumbnail.png",
+        "period" : "2024.06.02 ~ 2024.07.09",
+        "info" : "숙박 시설과 승차권 조회 및 예약이 가능한 서비스",
+        "skills" : "#Thymeleaf #MyBatis #OAuth #Spring" 
+    },
+    {
+        "id" : 3,
+        "name" : "창업스팟파인더",
+        "thumbnail": "/projects/localtrend/Thumbnail.png",
+        "period" : "2023.03.02 ~ 2023.06.12",
+        "info" : "서울시 지역상권을 분석하고 추천해 주는 서비스",
+        "skills" : "#React #Spring #JPA"
+    }
+]
