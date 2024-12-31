@@ -5,7 +5,11 @@
         "thumbnail": "/projects/coffeebean/Thumbnail.png",
         "period" : "2024.07.27 ~ 2024.08.27",
         "info" : "중고 물품 및 중고차 거래 플랫폼",
-        "skills" : "#React #JPA #JWT"
+        "skills" : "#React #JPA #JWT",
+        "images" : [
+            "https://i.postimg.cc/QC9mp1dq/image.png",
+            "https://i.postimg.cc/KYf0FmWt/1.png"
+        ]
     },
     {
         "id" : 2,
@@ -13,7 +17,8 @@
         "thumbnail": "/projects/jeogieottae/Thumbnail.png",
         "period" : "2024.06.02 ~ 2024.07.09",
         "info" : "숙박 시설과 승차권 조회 및 예약이 가능한 서비스",
-        "skills" : "#Thymeleaf #MyBatis #OAuth #Spring" 
+        "skills" : "#Thymeleaf #MyBatis #OAuth #Spring",
+        "images" : []
     },
     {
         "id" : 3,
@@ -21,6 +26,7 @@
         "thumbnail": "/projects/localtrend/Thumbnail.png",
         "period" : "2023.03.02 ~ 2023.06.12",
         "info" : "서울시 지역상권을 분석하고 추천해 주는 서비스",
-        "skills" : "#React #Spring #JPA"
+        "skills" : "#React #Spring #JPA",
+        "images" : []
     }
 ]

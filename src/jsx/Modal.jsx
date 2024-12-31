@@ -1,19 +1,29 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Style from '../css/Modal.module.css';
 import { motion } from 'framer-motion';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import Slider from 'react-slick';
 
 const Modal = ({ project, onClose }) => {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        pauseOnHover: true,
+    const sliderRef = useRef(null);
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const slides = project.images;
+    const slideWidth = 100;
+
+    const goToSlide = (index) => {
+        if (sliderRef.current) {
+            const newIndex = (index + slides.length) % slides.length;
+            sliderRef.current.style.transform = `translateX(-${newIndex * slideWidth}%)`;
+            setCurrentIndex(newIndex);
+        }
     };
+
+    const nextSlide = () => goToSlide(currentIndex + 1);
+    const prevSlide = () => goToSlide(currentIndex - 1);
+
+    useEffect(() => {
+        const interval = setInterval(nextSlide, 3000);
+        return () => clearInterval(interval);
+    }, [currentIndex]);
 
     if (!project) return null;
     return (
@@ -36,15 +46,27 @@ const Modal = ({ project, onClose }) => {
                 transition={{ duration: 0.4, ease: "easeOut" }}
             >
                 <button className={Style.closeButton} onClick={onClose}>X</button>
-                <Slider {...settings} className={Style.slider}>
-                    <div className={Style.infoImageFrame}>
-                        <img className={Style.infoImage} src={project.thumbnail} alt='thumbnail'/>
+                <div className={Style.sliderContainer}>
+                    <div className={Style.sliderWrapper}>
+                        {slides.map((src, index) => (
+                            <div className={Style.slide} key={index}>
+                                <img src={src} alt={`Slide ${index + 1}`}/>
+                            </div>
+                        ))}
                     </div>
-                    <div>
-                        <img src={project.thumbnail} alt='thumbnail'/>
+                    <button className={Style.prevButton} onClick={prevSlide}>&#xE000;</button>
+                    <button className={Style.nextButton} onClick={nextSlide}>&#xE001;</button>
+                    <div className={Style.dots}>
+                        {slides.map((_, index) => (
+                            <span
+                                key={index}
+                                className={`${Style.dot} ${currentIndex === index ? Style.active : ""}`}
+                                onClick={() => goToSlide(index)}
+                            ></span>
+                        ))}
                     </div>
-                </Slider>
-                <div>
+                </div>
+                <div className={Style.projectInfo}>
                     <h2 className={Style.name}>{project.name}</h2>
                     <p className={Style.period}>{project.period}</p>
                     <p className={Style.info}>{project.info}</p>
