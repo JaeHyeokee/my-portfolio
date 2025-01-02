@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'ButtonFont';
+    src: url('../font/SpoqaHanSansNeo-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 .modalBackdrop {
     position: fixed;
     top: 0;
@@ -22,18 +29,21 @@
 
 .closeButton {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 15px;
+    right: 15px;
     background: none;
     border: none;
-    font-size: 1.5rem;
     cursor: pointer;
+}
+
+.closeButtonImg {
+    height: 20px;
 }
 
 .sliderContainer {
     position: relative;
-    width: 100%;
-    max-width: 600px;
+    width: 50%;
+    height: 100%;
     overflow: hidden;
     margin: auto;
 }
@@ -41,27 +51,31 @@
 .sliderWrapper {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    width: calc(100% * var(--slide-count));
 }
 
 .slide {
     flex-shrink: 0;
     width: 100%;
+    height: 100%;
     text-align: center;
+    overflow: hidden;
 }
 
 .slide img {
-    width: 100%;
-    border-radius: 10px;
+    width: 100%   ;
+    object-fit: cover;
+    display: block;
 }
 
 .prevButton, .nextButton {
+    font-family: 'ButtonFont', sans-serif;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
     color: white;
     border: none;
-    border-radius: 50%;
     width: 40px;
     height: 40px;
     font-size: 18px;
@@ -74,41 +88,42 @@
 }
 
 .prevButton:hover, .nextButton:hover {
-    background: #03C75A;
-}
-
-.prevButton {
-    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .nextButton {
-    right: 10px;
+    right: 0;
 }
 
 .dots {
     display: flex;
     justify-content: center;
-    margin-top: 10px;
-    gap: 10px;
+    gap: 5px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    z-index: 10;
 }
 
 .dot {
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 3px;
     background: gray;
-    border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .dot.active {
-    background: #03C75A;
+    background: white;
+    width: 25px;
 }
 
 .projectInfo {
     display: flex;
     flex-direction: column;
     width: 50%;
+    padding: 30px;
 }
 
 .name {

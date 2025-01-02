@@ -1,19 +1,23 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Style from '../css/Modal.module.css';
 import { motion } from 'framer-motion';
+import X from '../img/modal/X.png';
 
 const Modal = ({ project, onClose }) => {
     const sliderRef = useRef(null);
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const slides = project.images;
-    const slideWidth = 100;
 
     const goToSlide = (index) => {
+        console.log(currentIndex);
         if (sliderRef.current) {
-            const newIndex = (index + slides.length) % slides.length;
-            sliderRef.current.style.transform = `translateX(-${newIndex * slideWidth}%)`;
-            setCurrentIndex(newIndex);
+            const slideWidth = sliderRef.current.parentElement.offsetWidth;
+            setCurrentIndex((prevIndex) => {
+                const newIndex = (prevIndex + slides.length + index) % slides.length;
+                sliderRef.current.style.transform = `translateX(-${newIndex * slideWidth}%)`;
+                return newIndex;
+            });
         }
     };
 
@@ -21,9 +25,13 @@ const Modal = ({ project, onClose }) => {
     const prevSlide = () => goToSlide(currentIndex - 1);
 
     useEffect(() => {
-        const interval = setInterval(nextSlide, 3000);
+        console.log(slides);
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+        }, 3000);
+
         return () => clearInterval(interval);
-    }, [currentIndex]);
+    }, [slides.length]);
 
     if (!project) return null;
     return (
@@ -45,9 +53,9 @@ const Modal = ({ project, onClose }) => {
                 exit="hidden"
                 transition={{ duration: 0.4, ease: "easeOut" }}
             >
-                <button className={Style.closeButton} onClick={onClose}>X</button>
+                <button className={Style.closeButton} onClick={onClose}><img className={Style.closeButtonImg} src={X} alt='Close Button'/></button>
                 <div className={Style.sliderContainer}>
-                    <div className={Style.sliderWrapper}>
+                    <div className={Style.sliderWrapper} ref={sliderRef}>
                         {slides.map((src, index) => (
                             <div className={Style.slide} key={index}>
                                 <img src={src} alt={`Slide ${index + 1}`}/>
