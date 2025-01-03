@@ -10,30 +10,38 @@ const Modal = ({ project, onClose }) => {
     const slides = project.images;
 
     const goToSlide = (index) => {
-        console.log(currentIndex);
+        const slideWidth = sliderRef.current?.offsetWidth || 0;
+        const newIndex = (index + slides.length) % slides.length;
+        setCurrentIndex(newIndex);
         if (sliderRef.current) {
-            const slideWidth = sliderRef.current.parentElement.offsetWidth;
-            setCurrentIndex((prevIndex) => {
-                const newIndex = (prevIndex + slides.length + index) % slides.length;
-                sliderRef.current.style.transform = `translateX(-${newIndex * slideWidth}%)`;
-                return newIndex;
-            });
+            sliderRef.current.style.transform = `translateX(-${newIndex * slideWidth}px)`;
         }
     };
 
-    const nextSlide = () => goToSlide(currentIndex + 1);
     const prevSlide = () => goToSlide(currentIndex - 1);
+    const nextSlide = () => goToSlide(currentIndex + 1);
 
     useEffect(() => {
-        console.log(slides);
         const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+            goToSlide(currentIndex + 1);
         }, 3000);
 
         return () => clearInterval(interval);
-    }, [slides.length]);
+    }, [currentIndex, slides.length]);
+
+    useEffect(() => {
+        const handleResize = () => {
+            const slideWidth = sliderRef.current?.offsetWidth || 0;
+            if (sliderRef.current) {
+                sliderRef.current.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            }
+        };
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [currentIndex]);
 
     if (!project) return null;
+
     return (
         <motion.div
             className={Style.modalBackdrop}
@@ -68,7 +76,7 @@ const Modal = ({ project, onClose }) => {
                         {slides.map((_, index) => (
                             <span
                                 key={index}
-                                className={`${Style.dot} ${currentIndex === index ? Style.active : ""}`}
+                                className={`${Style.dot} ${currentIndex === index ? Style.active : ''}`}
                                 onClick={() => goToSlide(index)}
                             ></span>
                         ))}
