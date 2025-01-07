@@ -32,7 +32,30 @@
         "period" : "2024.06.02 ~ 2024.07.09",
         "info" : "숙박 시설과 승차권 조회 및 예약이 가능한 서비스",
         "skills" : "#Thymeleaf #MyBatis #OAuth #Spring",
-        "images" : []
+        "images" : [
+            "/projects/jeogieottae/snapshot/1.png",
+            "/projects/jeogieottae/snapshot/2.png",
+            "/projects/jeogieottae/snapshot/3.png",
+            "/projects/jeogieottae/snapshot/4.png",
+            "/projects/jeogieottae/snapshot/5.png",
+            "/projects/jeogieottae/snapshot/6.png",
+            "/projects/jeogieottae/snapshot/7.png",
+            "/projects/jeogieottae/snapshot/8.png",
+            "/projects/jeogieottae/snapshot/9.png",
+            "/projects/jeogieottae/snapshot/10.png",
+            "/projects/jeogieottae/snapshot/11.png",
+            "/projects/jeogieottae/snapshot/12.png",
+            "/projects/jeogieottae/snapshot/13.png",
+            "/projects/jeogieottae/snapshot/14.png",
+            "/projects/jeogieottae/snapshot/15.png",
+            "/projects/jeogieottae/snapshot/16.png",
+            "/projects/jeogieottae/snapshot/17.png",
+            "/projects/jeogieottae/snapshot/18.png",
+            "/projects/jeogieottae/snapshot/19.png",
+            "/projects/jeogieottae/snapshot/20.png",
+            "/projects/jeogieottae/snapshot/21.png",
+            "/projects/jeogieottae/snapshot/22.png"
+        ]
     },
     {
         "id" : 3,
@@ -41,6 +64,10 @@
         "period" : "2023.03.02 ~ 2023.06.12",
         "info" : "서울시 지역상권을 분석하고 추천해 주는 서비스",
         "skills" : "#React #Spring #JPA",
-        "images" : []
+        "images" : [
+            "/projects/localtrend/snapshot/1.png",
+            "/projects/localtrend/snapshot/2.png",
+            "/projects/localtrend/snapshot/3.png"
+        ]
     }
 ]
